@@ -19,9 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500`}>
-        <div className="fixed w-full z-10 flex justify-center p-4">
-          <nav className="bg-white bg-opacity-10 backdrop-blur-lg rounded-full px-6 py-2">
+      <body className={`${inter.className} bg-[#1D1E2C]`}>
+        <div className="fixed w-full z-50 flex justify-center p-4">
+          <nav className="bg-[#8A84E2] bg-opacity-10 backdrop-blur-lg rounded-full px-6 py-2">
             <div className="flex items-center space-x-8">
               <Link href="/" className="flex items-center">
                 <Image

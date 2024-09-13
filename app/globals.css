@@ -15,13 +15,89 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1D1E2C;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.font-helvetica {
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+.geometric-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  animation: move 20s infinite linear;
+  opacity: 0.5;
+}
+
+.particle:nth-child(3n) {
+  background: #8A84E2;
+}
+
+.particle:nth-child(3n+1) {
+  background: #00F0FF;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(1000px, 1000px);
+  }
+}
+
+.particle:nth-child(even) {
+  animation-direction: reverse;
+}
+
+.particle:nth-child(3n) {
+  animation-duration: 25s;
+}
+
+.particle:nth-child(3n+1) {
+  animation-duration: 35s;
 }
